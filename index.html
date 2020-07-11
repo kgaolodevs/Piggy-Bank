@@ -23,12 +23,35 @@
 
       <section class="app__income">
         <form class="app__incomeForm">
-          <img
-            src="./img/favicon.svg"
-            alt="logo"
-            class="app__incomeForm--logo"
-          />
+          <div class="topSection">
+            <img
+              src="./img/favicon.svg"
+              alt="logo"
+              class="app__incomeForm--logo"
+            />
+            <input
+              placeholder="ZAR"
+              type="number"
+              class="app__incomeForm--input"
+            />
+          </div>
+          <button type="submit" class="app__incomeForm--button">
+            Submit
+          </button>
         </form>
+
+        <div class="app__textSection">
+          <p class="app__textSection--text">
+            How much do you expect to receive as income next month? <br />
+            <span>Enter the amount above</span>
+          </p>
+          <p class="app__textSection--text2">
+            Piggy Bank &copy; is a web platform that is designed to guide you on
+            a very simple, yet effective path towards financial independence
+          </p>
+
+          <div class="app__textSection--logoText">piggy <span>bank</span></div>
+        </div>
       </section>
     </section>
     <script src="./app.js"></script>
