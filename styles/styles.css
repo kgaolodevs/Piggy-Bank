@@ -1,0 +1,51 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Poppins", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+@font-face {
+  font-family: baseFont;
+  src: url(../fonts/MohrRounded-SemiBold.ttf);
+}
+
+.app {
+  height: 100vh;
+  width: 100vw;
+  background: -webkit-gradient(linear, left bottom, left top, from(#cfcdbf), color-stop(#f2f2f2), color-stop(#e9e7e7), to(#eaeaea));
+  background: linear-gradient(to top, #cfcdbf, #f2f2f2, #e9e7e7, #eaeaea);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.app__logo {
+  outline: 2px crimson solid;
+  text-align: center;
+}
+
+.app__logo--icon {
+  height: 10rem;
+}
+
+.app__logo--text {
+  font-size: 2rem;
+  font-family: baseFont;
+}
+
+.app__logo--text span {
+  font-family: baseFont;
+}
+/*# sourceMappingURL=styles.css.map */
