@@ -29,23 +29,57 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-transition: all ease-in-out 0.5s;
+  transition: all ease-in-out 0.5s;
 }
 
-.app__logo {
-  outline: 2px crimson solid;
+.app__landingPage {
+  position: relative;
   text-align: center;
+  -webkit-animation: intro 2.5s ease;
+          animation: intro 2.5s ease;
 }
 
-.app__logo--icon {
-  height: 10rem;
+.app__landingPage--icon {
+  height: 15rem;
 }
 
-.app__logo--text {
+.app__landingPage--text {
   font-size: 2rem;
+  font-weight: bold;
+  font-family: baseFont;
+  color: #ed7dad;
+  position: absolute;
+  top: 12rem;
+  left: 13%;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.app__landingPage--text span {
+  color: #3e3b38;
   font-family: baseFont;
 }
 
-.app__logo--text span {
-  font-family: baseFont;
+@-webkit-keyframes intro {
+  0% {
+    opacity: 0;
+    scale: 2;
+  }
+  100% {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+@keyframes intro {
+  0% {
+    opacity: 0;
+    scale: 2;
+  }
+  100% {
+    opacity: 1;
+    scale: 1;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

@@ -5,6 +5,13 @@
   font-family: "Poppins", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
+// Variables
+$primary-pink: #ed7dad;
+$secondary-pink: #ea5c9d;
+$primary-yellow: #f19121;
+$secondary-yellow: #d58228;
+$primary-black: #3e3b38;
+
 @font-face {
   font-family: baseFont;
   src: url(../fonts/MohrRounded-SemiBold.ttf);
@@ -18,19 +25,44 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  transition: all ease-in-out 0.5s;
 
-  &__logo {
-    outline: 2px crimson solid;
+  &__landingPage {
+    position: relative;
+    // outline: 2px crimson solid;
     text-align: center;
+    animation: intro 2.5s ease;
+
     &--icon {
-      height: 10rem;
+      height: 15rem;
     }
     &--text {
+      // outline: 2px crimson solid;
       font-size: 2rem;
+      font-weight: bold;
       font-family: baseFont;
+      color: $primary-pink;
+      position: absolute;
+      top: 12rem;
+      left: 13%;
+      transition: all 0.5s ease-in-out;
       span {
+        color: $primary-black;
         font-family: baseFont;
       }
     }
+  }
+}
+
+// Animations
+@keyframes intro {
+  0% {
+    opacity: 0;
+    scale: 2;
+  }
+
+  100% {
+    opacity: 1;
+    scale: 1;
   }
 }
