@@ -269,6 +269,27 @@
 
 .app__percentages--content {
   text-align: center;
+  font-size: 0.9rem;
+  padding: 0.8rem;
+}
+
+.app__percentages--content span {
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+.app__percentages--logoText {
+  font-size: 1.2rem;
+  font-weight: bold;
+  font-family: baseFont;
+  color: #ed7dad;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.app__percentages--logoText span {
+  color: #3e3b38;
+  font-family: baseFont;
 }
 
 @-webkit-keyframes intro {
