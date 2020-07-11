@@ -68,99 +68,121 @@ $primary-black: #3e3b38;
       0 100px 80px rgba(0, 0, 0, 0.12);
     border-bottom-left-radius: 1rem;
     border-bottom-right-radius: 1rem;
-  }
 
-  &__incomeForm {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-
-    .topSection {
+    .app__textSection {
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
-    }
+      justify-content: space-between;
+      height: 100%;
 
-    &--logo {
-      height: 10rem;
-    }
-
-    &--input {
-      width: 70%;
-      height: 20%;
-      font-size: 2rem;
-      text-align: center;
-      border-radius: 0.6rem;
-      border: 1px $primary-black solid;
-      &:focus {
-        outline: none;
-      }
-      &::-webkit-outer-spin-button,
-      ::-webkit-inner-spin-button {
-        webkit-appearance: none;
-        margin: 0;
-      }
-    }
-
-    input[type="number"] {
-      -moz-appearance: textfield;
-    }
-
-    &--button {
-      width: 100%;
-      padding: 1rem;
-      border-bottom-left-radius: 1rem;
-      border-bottom-right-radius: 1rem;
-      border: none;
-      background: $primary-yellow;
-      color: white;
-      font-size: 1.2rem;
-      &:hover {
-        cursor: pointer;
+      &--text {
+        text-align: center;
+        margin-top: 2rem;
+        span {
+          font-weight: bold;
+          font-size: 1.2rem;
+        }
       }
 
-      &:focus {
-        background: $tertiary-yellow;
+      &--text2 {
+        margin-top: 3.5rem;
+        text-align: center;
+        font-size: 0.7rem;
+      }
+      &--logoText {
+        font-size: 1.2rem;
+        font-weight: bold;
+        font-family: baseFont;
+        color: $primary-pink;
+        text-align: center;
+        margin-bottom: 1.5rem;
+
+        span {
+          color: $primary-black;
+          font-family: baseFont;
+        }
+      }
+    }
+
+    .app__incomeForm {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+
+      .topSection {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      &--logo {
+        height: 10rem;
+      }
+
+      &--input {
+        width: 70%;
+        height: 20%;
+        font-size: 2rem;
+        text-align: center;
+        border-radius: 0.6rem;
+        border: 1px $primary-black solid;
+        &:focus {
+          outline: none;
+        }
+        &::-webkit-outer-spin-button,
+        ::-webkit-inner-spin-button {
+          webkit-appearance: none;
+          margin: 0;
+        }
+      }
+
+      input[type="number"] {
+        -moz-appearance: textfield;
+      }
+
+      &--button {
+        width: 100%;
+        padding: 1rem;
+        border-bottom-left-radius: 1rem;
+        border-bottom-right-radius: 1rem;
+        border: none;
+        background: $primary-yellow;
+        color: white;
+        font-size: 1.2rem;
+        &:hover {
+          cursor: pointer;
+        }
+
+        &:focus {
+          background: $tertiary-yellow;
+        }
       }
     }
   }
 
-  &__textSection {
+  &__percentages {
+    height: 100%;
+    border: crimson 2px solid;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    height: 100%;
-
-    &--text {
-      text-align: center;
-      margin-top: 2rem;
-      span {
-        font-weight: bold;
-        font-size: 1.2rem;
+    &--boxes {
+      display: flex;
+      flex-wrap: wrap;
+      .box {
+        background: white;
+        margin: 1rem;
+        padding: 3rem;
       }
     }
 
-    &--text2 {
-      margin-top: 3.5rem;
+    &--content {
       text-align: center;
-      font-size: 0.7rem;
-    }
-    &--logoText {
-      font-size: 1.2rem;
-      font-weight: bold;
-      font-family: baseFont;
-      color: $primary-pink;
-      text-align: center;
-      margin-bottom: 1.5rem;
-
-      span {
-        color: $primary-black;
-        font-family: baseFont;
-      }
     }
   }
 }
@@ -169,7 +191,7 @@ $primary-black: #3e3b38;
 @keyframes intro {
   0% {
     opacity: 0;
-    scale: 2;
+    scale: 3;
   }
 
   100% {

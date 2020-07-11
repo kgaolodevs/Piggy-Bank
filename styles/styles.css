@@ -74,7 +74,54 @@
   border-bottom-right-radius: 1rem;
 }
 
-.app__incomeForm {
+.app__income .app__textSection {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 100%;
+}
+
+.app__income .app__textSection--text {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.app__income .app__textSection--text span {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.app__income .app__textSection--text2 {
+  margin-top: 3.5rem;
+  text-align: center;
+  font-size: 0.7rem;
+}
+
+.app__income .app__textSection--logoText {
+  font-size: 1.2rem;
+  font-weight: bold;
+  font-family: baseFont;
+  color: #ed7dad;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.app__income .app__textSection--logoText span {
+  color: #3e3b38;
+  font-family: baseFont;
+}
+
+.app__income .app__incomeForm {
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -91,7 +138,7 @@
           justify-content: space-between;
 }
 
-.app__incomeForm .topSection {
+.app__income .app__incomeForm .topSection {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -107,11 +154,11 @@
           justify-content: center;
 }
 
-.app__incomeForm--logo {
+.app__income .app__incomeForm--logo {
   height: 10rem;
 }
 
-.app__incomeForm--input {
+.app__income .app__incomeForm--input {
   width: 70%;
   height: 20%;
   font-size: 2rem;
@@ -120,21 +167,21 @@
   border: 1px #3e3b38 solid;
 }
 
-.app__incomeForm--input:focus {
+.app__income .app__incomeForm--input:focus {
   outline: none;
 }
 
-.app__incomeForm--input::-webkit-outer-spin-button,
-.app__incomeForm--input ::-webkit-inner-spin-button {
+.app__income .app__incomeForm--input::-webkit-outer-spin-button,
+.app__income .app__incomeForm--input ::-webkit-inner-spin-button {
   webkit-appearance: none;
   margin: 0;
 }
 
-.app__incomeForm input[type="number"] {
+.app__income .app__incomeForm input[type="number"] {
   -moz-appearance: textfield;
 }
 
-.app__incomeForm--button {
+.app__income .app__incomeForm--button {
   width: 100%;
   padding: 1rem;
   border-bottom-left-radius: 1rem;
@@ -145,15 +192,17 @@
   font-size: 1.2rem;
 }
 
-.app__incomeForm--button:hover {
+.app__income .app__incomeForm--button:hover {
   cursor: pointer;
 }
 
-.app__incomeForm--button:focus {
+.app__income .app__incomeForm--button:focus {
   background: #d38633;
 }
 
-.app__textSection {
+.app__percentages {
+  height: 100%;
+  border: crimson 2px solid;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -167,43 +216,30 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  height: 100%;
 }
 
-.app__textSection--text {
+.app__percentages--boxes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.app__percentages--boxes .box {
+  background: white;
+  margin: 1rem;
+  padding: 3rem;
+}
+
+.app__percentages--content {
   text-align: center;
-  margin-top: 2rem;
-}
-
-.app__textSection--text span {
-  font-weight: bold;
-  font-size: 1.2rem;
-}
-
-.app__textSection--text2 {
-  margin-top: 3.5rem;
-  text-align: center;
-  font-size: 0.7rem;
-}
-
-.app__textSection--logoText {
-  font-size: 1.2rem;
-  font-weight: bold;
-  font-family: baseFont;
-  color: #ed7dad;
-  text-align: center;
-  margin-bottom: 1.5rem;
-}
-
-.app__textSection--logoText span {
-  color: #3e3b38;
-  font-family: baseFont;
 }
 
 @-webkit-keyframes intro {
   0% {
     opacity: 0;
-    scale: 2;
+    scale: 3;
   }
   100% {
     opacity: 1;
@@ -214,7 +250,7 @@
 @keyframes intro {
   0% {
     opacity: 0;
-    scale: 2;
+    scale: 3;
   }
   100% {
     opacity: 1;
