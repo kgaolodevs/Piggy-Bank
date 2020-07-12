@@ -141,6 +141,7 @@ $primary-black: #3e3b38;
         width: 70%;
         height: 20%;
         font-size: 2rem;
+        font-weight: bold;
         text-align: center;
         border-radius: 0.6rem;
         border: 1px $primary-black solid;
@@ -236,6 +237,74 @@ $primary-black: #3e3b38;
 
     &--logoText {
       @include logoText();
+    }
+  }
+
+  &__completed {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 1rem;
+
+    &--icon {
+      padding-top: 5rem;
+      i {
+        color: #2a9d8f;
+        font-size: 6rem;
+      }
+    }
+    &--content {
+      text-align: center;
+      span {
+        font-weight: bold;
+        font-size: 1.2rem;
+      }
+    }
+
+    &--btn {
+      border: none;
+      background: $primary-yellow;
+      color: white;
+      padding: 1rem 2rem;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+      &:hover {
+        cursor: pointer;
+        box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+          0 10px 10px rgba(0, 0, 0, 0.22);
+      }
+      &:active {
+        box-shadow: none;
+        scale: 0.96;
+      }
+    }
+
+    &--logoText {
+      @include logoText();
+    }
+  }
+
+  &__budget {
+    // border: 0.3rem solid crimson;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .section {
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+      background: white;
+      margin: 0.5rem;
+    }
+
+    &--expenses {
+      flex: 1;
+      // border: 0.3rem solid indigo;
+    }
+    &--growthFund {
+      flex: 1;
+      // border: 0.3rem solid greenyellow;
     }
   }
 }

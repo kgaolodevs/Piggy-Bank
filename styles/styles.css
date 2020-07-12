@@ -162,6 +162,7 @@
   width: 70%;
   height: 20%;
   font-size: 2rem;
+  font-weight: bold;
   text-align: center;
   border-radius: 0.6rem;
   border: 1px #3e3b38 solid;
@@ -290,6 +291,108 @@
 .app__percentages--logoText span {
   color: #3e3b38;
   font-family: baseFont;
+}
+
+.app__completed {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  padding: 1rem;
+}
+
+.app__completed--icon {
+  padding-top: 5rem;
+}
+
+.app__completed--icon i {
+  color: #2a9d8f;
+  font-size: 6rem;
+}
+
+.app__completed--content {
+  text-align: center;
+}
+
+.app__completed--content span {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.app__completed--btn {
+  border: none;
+  background: #f19121;
+  color: white;
+  padding: 1rem 2rem;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.app__completed--btn:hover {
+  cursor: pointer;
+  -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+          box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.app__completed--btn:active {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  scale: 0.96;
+}
+
+.app__completed--logoText {
+  font-size: 1.2rem;
+  font-weight: bold;
+  font-family: baseFont;
+  color: #ed7dad;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.app__completed--logoText span {
+  color: #3e3b38;
+  font-family: baseFont;
+}
+
+.app__budget {
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.app__budget .section {
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  background: white;
+  margin: 0.5rem;
+}
+
+.app__budget--expenses {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.app__budget--growthFund {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 
 @-webkit-keyframes intro {
