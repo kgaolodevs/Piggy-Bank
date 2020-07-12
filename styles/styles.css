@@ -39,6 +39,8 @@
   text-align: center;
   -webkit-animation: intro 2.5s ease;
           animation: intro 2.5s ease;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 .app__landingPage--icon {
@@ -174,7 +176,7 @@
 
 .app__income .app__incomeForm--input::-webkit-outer-spin-button,
 .app__income .app__incomeForm--input ::-webkit-inner-spin-button {
-  webkit-appearance: none;
+  -webkit-appearance: none;
   margin: 0;
 }
 
@@ -497,5 +499,13 @@
     opacity: 1;
     scale: 1;
   }
+}
+
+.hide {
+  opacity: 0;
+}
+
+.remove {
+  display: none;
 }
 /*# sourceMappingURL=styles.css.map */

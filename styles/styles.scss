@@ -49,6 +49,7 @@ $primary-black: #3e3b38;
     // outline: 2px crimson solid;
     text-align: center;
     animation: intro 2.5s ease;
+    transition: all 0.5s ease-in-out;
 
     &--icon {
       height: 15rem;
@@ -150,7 +151,7 @@ $primary-black: #3e3b38;
         }
         &::-webkit-outer-spin-button,
         ::-webkit-inner-spin-button {
-          webkit-appearance: none;
+          -webkit-appearance: none;
           margin: 0;
         }
       }
@@ -391,4 +392,12 @@ $primary-black: #3e3b38;
     opacity: 1;
     scale: 1;
   }
+}
+
+.hide {
+  opacity: 0;
+}
+
+.remove {
+  display: none;
 }
