@@ -5,6 +5,7 @@ const app = {
   incomeForm: document.querySelector(".app__incomeForm"),
   incomeInput: document.querySelector(".app__incomeForm--input"),
   percentagesPage: document.querySelector(".app__percentages"),
+  percentageBoxes: document.querySelector(".app__percentages--boxes"),
 };
 
 // Functions
@@ -28,6 +29,20 @@ const actions = {
   },
   closeIncomePage: function () {
     app.incomePage.classList.add("remove");
+  },
+  showPercentagesPage: function () {
+    app.percentagesPage.classList.remove("remove");
+  },
+  storePercentage: function (e) {
+    const percentageText = e.target.textContent;
+    const percentage = Number(percentageText.replace("%", ""));
+    console.log(percentage);
+  },
+  hidePercentagesPage: function () {
+    app.percentagesPage.classList.add("hide");
+  },
+  closePercentagesPage: function () {
+    app.percentagesPage.classList.add("remove");
   },
 };
 
@@ -53,4 +68,14 @@ app.incomeForm.addEventListener("submit", (e) => {
 
 app.incomePage.addEventListener("transitionend", () => {
   actions.closeIncomePage();
+  actions.showPercentagesPage();
+});
+
+app.percentageBoxes.addEventListener("click", (e) => {
+  if (e.target.classList.contains("app__percentages--boxes")) {
+    null;
+  } else {
+    actions.storePercentage(e);
+    actions.hidePercentagesPage();
+  }
 });

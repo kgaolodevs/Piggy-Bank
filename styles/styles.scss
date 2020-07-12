@@ -189,11 +189,13 @@ $primary-black: #3e3b38;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    transition: all 0.5s ease-in-out;
     &--boxes {
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
       color: white;
+
       .box {
         margin: 0.5rem;
         padding: 3rem;
@@ -396,6 +398,7 @@ $primary-black: #3e3b38;
   }
 }
 
+// Dynamic classes
 .hide {
   opacity: 0;
 }
