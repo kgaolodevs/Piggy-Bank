@@ -291,20 +291,59 @@ $primary-black: #3e3b38;
     width: 100%;
     display: flex;
     flex-direction: column;
+    font-size: 0.75rem;
 
     .section {
       box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-      background: white;
+      // background: white;
       margin: 0.5rem;
+      border-radius: 0.5rem;
+      color: white;
+      padding: 0.5rem;
+    }
+
+    li {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.5rem;
+      border-radius: 0.8rem;
+      p {
+        font-weight: bold;
+      }
+    }
+
+    .title {
+      text-align: center;
+      margin-bottom: 1rem;
+      font-size: 0.85rem;
+      font-weight: bold;
+      border-bottom: 2px solid white;
+      padding-bottom: 0.5rem;
     }
 
     &--expenses {
       flex: 1;
       // border: 0.3rem solid indigo;
+      background: #e76f51;
+
+      .app__budget--expensesList {
+        li:nth-child(even) {
+          background: #c45e44;
+        }
+      }
     }
+
     &--growthFund {
       flex: 1;
       // border: 0.3rem solid greenyellow;
+      background: #264653;
+
+      .app__budget--growthList {
+        li:nth-child(even) {
+          background: #305868;
+        }
+      }
     }
   }
 }
