@@ -83,6 +83,7 @@ $primary-black: #3e3b38;
       0 100px 80px rgba(0, 0, 0, 0.12);
     border-bottom-left-radius: 1rem;
     border-bottom-right-radius: 1rem;
+    transition: all 0.5s ease-in-out;
 
     .app__textSection {
       display: flex;
@@ -149,6 +150,7 @@ $primary-black: #3e3b38;
         &:focus {
           outline: none;
         }
+
         &::-webkit-outer-spin-button,
         ::-webkit-inner-spin-button {
           -webkit-appearance: none;

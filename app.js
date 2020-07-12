@@ -23,6 +23,12 @@ const actions = {
     data.income = income;
     app.incomeInput.value = "";
   },
+  hideIncomePage: function () {
+    app.incomePage.classList.add("hide");
+  },
+  closeIncomePage: function () {
+    app.incomePage.classList.add("remove");
+  },
 };
 
 const data = {
@@ -33,11 +39,18 @@ const data = {
 app.landingPage.addEventListener("animationend", () => {
   actions.hideLandingPage();
 });
+
 app.landingPage.addEventListener("transitionend", () => {
   actions.closeLandingPage();
   actions.showIncomePage();
 });
+
 app.incomeForm.addEventListener("submit", (e) => {
   e.preventDefault();
   actions.storeIncome();
+  actions.hideIncomePage();
+});
+
+app.incomePage.addEventListener("transitionend", () => {
+  actions.closeIncomePage();
 });
