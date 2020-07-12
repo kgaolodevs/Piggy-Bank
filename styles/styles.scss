@@ -199,7 +199,7 @@ $primary-black: #3e3b38;
         font-size: 1.2rem;
         &:hover {
           cursor: pointer;
-          box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+          box-shadow: 0 14px 28px rgba(197, 197, 197, 0.25),
             0 10px 10px rgba(0, 0, 0, 0.22);
         }
         &:active {
@@ -292,6 +292,8 @@ $primary-black: #3e3b38;
     display: flex;
     flex-direction: column;
     font-size: 0.75rem;
+    position: relative;
+    overflow: hidden;
 
     .section {
       box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
@@ -343,6 +345,36 @@ $primary-black: #3e3b38;
         li:nth-child(even) {
           background: #305868;
         }
+      }
+    }
+
+    &--burger {
+      background: white;
+      height: 5rem;
+      width: 5rem;
+      bottom: -1rem;
+      right: -1rem;
+      margin-right: 0.5rem;
+      margin-bottom: 0.3rem;
+      border-radius: 10rem;
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s ease-in-out;
+
+      &:hover {
+        cursor: pointer;
+        background: #2a9d8f;
+      }
+
+      .line {
+        background: #25242a;
+        height: 0.15rem;
+        width: 2rem;
+        margin: 0.2rem;
+        pointer-events: nones;
       }
     }
   }
