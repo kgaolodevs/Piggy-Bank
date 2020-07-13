@@ -10,6 +10,7 @@ const app = {
   proceedButton: document.querySelector(".app__completed--btn"),
   budgetPage: document.querySelector(".app__budget"),
   expenses: document.querySelectorAll(".exp"),
+  incomes: document.querySelectorAll(".inc"),
 };
 
 // Functions
@@ -83,8 +84,22 @@ const actions = {
       // Entertainment = 5% of income
       data.expenses.items.push({ entertainment: data.income * (5 / 100) });
 
-      data.expenses.updateView();
+      ////////// INCOME //////////
+      // Emergency savings = 4% of income
+      data.incomes.items.push({ savings: data.income * (4 / 100) });
+
+      // Retirement = 3% of income
+      data.incomes.items.push({ retirement: data.income * (3 / 100) });
+
+      // Investments = 3% of income
+      data.incomes.items.push({ investments: data.income * (3 / 100) });
+    } else if (data.percentage === 20) {
+    } else if (data.percentage === 35) {
+    } else if (data.percentage === 50) {
     }
+
+    data.updateView(app.expenses, data.expenses);
+    data.updateView(app.incomes, data.incomes);
   },
 
   showBudgetPage: function () {
@@ -97,18 +112,19 @@ const data = {
   percentage: null,
   expenses: {
     items: [],
-    updateView: function () {
-      // Update budget view
-      let index = 0;
-      app.expenses.forEach((exp) => {
-        let amount = Object.entries(data.expenses.items[index])[0][1];
-        index++;
-        console.log(amount);
-        exp.textContent = `R ${amount}`;
-      });
-    },
   },
-  income: {},
+  incomes: {
+    items: [],
+  },
+  updateView: function (transactions, transactionType) {
+    // Update budget view
+    let index = 0;
+    transactions.forEach((transaction) => {
+      let amount = Object.entries(transactionType.items[index])[0][1];
+      index++;
+      transaction.textContent = `R ${amount}`;
+    });
+  },
 };
 
 // Event listeners
