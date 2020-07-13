@@ -9,6 +9,7 @@ const app = {
   completedPage: document.querySelector(".app__completed"),
   proceedButton: document.querySelector(".app__completed--btn"),
   budgetPage: document.querySelector(".app__budget"),
+  expenses: document.querySelectorAll(".exp"),
 };
 
 // Functions
@@ -61,25 +62,27 @@ const actions = {
     if (data.percentage === 10) {
       ////////// EXPENSES //////////
       // Rent = 30% of income
-      data.expenses.rent = `R ${data.income * (30 / 100)}`;
+      data.expenses.items.push({ rent: data.income * (30 / 100) });
 
       // Medical = 10% of income
-      data.expenses.medical = data.income * (10 / 100);
+      data.expenses.items.push({ medical: data.income * (10 / 100) });
 
       // Insurance = 5% of income
-      data.expenses.insurance = data.income * (5 / 100);
+      data.expenses.items.push({ insurance: data.income * (5 / 100) });
 
       // Grocery = 20% of income
-      data.expenses.grocery = data.income * (20 / 100);
+      data.expenses.items.push({ grocery: data.income * (20 / 100) });
 
       // Clothing = 10% of income
-      data.expenses.clothing = data.income * (10 / 100);
+      data.expenses.items.push({ clothing: data.income * (10 / 100) });
 
       // Transport = 10% of income
-      data.expenses.transport = data.income * (10 / 100);
+      data.expenses.items.push({ transport: data.income * (10 / 100) });
 
       // Entertainment = 5% of income
-      data.expenses.entertainment = data.income * (5 / 100);
+      data.expenses.items.push({ entertainment: data.income * (5 / 100) });
+
+      // expenses.updateView();
     }
   },
 
@@ -91,7 +94,12 @@ const actions = {
 const data = {
   income: null,
   percentage: null,
-  expenses: {},
+  expenses: {
+    items: [],
+    updateView: function () {
+      // Update budget view
+    },
+  },
   income: {},
 };
 
@@ -122,12 +130,12 @@ app.percentageBoxes.addEventListener("click", (e) => {
   } else {
     actions.storePercentage(e);
     actions.hidePercentagesPage();
+    actions.calculateBudget();
   }
 });
 
 app.percentageBoxes.addEventListener("transitionend", () => {
   actions.closePercentagesPage();
-  actions.calculateBudget();
   actions.showCompletedPage();
 });
 
