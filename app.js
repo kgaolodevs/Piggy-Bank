@@ -59,7 +59,7 @@ const actions = {
 
   calculateBudget: function () {
     if (data.percentage === 10) {
-      console.log("10% was selected");
+      // Rent = 30% of income
     }
   },
 
