@@ -6,6 +6,9 @@ const app = {
   incomeInput: document.querySelector(".app__incomeForm--input"),
   percentagesPage: document.querySelector(".app__percentages"),
   percentageBoxes: document.querySelector(".app__percentages--boxes"),
+  completedPage: document.querySelector(".app__completed"),
+  proceedButton: document.querySelector(".app__completed--btn"),
+  budgetPage: document.querySelector(".app__budget"),
 };
 
 // Functions
@@ -36,7 +39,7 @@ const actions = {
   storePercentage: function (e) {
     const percentageText = e.target.textContent;
     const percentage = Number(percentageText.replace("%", ""));
-    console.log(percentage);
+    data.percentage = percentage;
   },
   hidePercentagesPage: function () {
     app.percentagesPage.classList.add("hide");
@@ -44,10 +47,30 @@ const actions = {
   closePercentagesPage: function () {
     app.percentagesPage.classList.add("remove");
   },
+  showCompletedPage: function () {
+    app.completedPage.classList.remove("remove");
+  },
+  hideCompletedPage: function () {
+    app.completedPage.classList.add("hide");
+  },
+  closeCompletedPage: function () {
+    app.completedPage.classList.add("remove");
+  },
+
+  calculateBudget: function () {
+    if (data.percentage === 10) {
+      console.log("10% was selected");
+    }
+  },
+
+  showBudgetPage: function () {
+    app.budgetPage.classList.remove("remove");
+  },
 };
 
 const data = {
   income: null,
+  percentage: null,
 };
 
 // Event listeners
@@ -78,4 +101,19 @@ app.percentageBoxes.addEventListener("click", (e) => {
     actions.storePercentage(e);
     actions.hidePercentagesPage();
   }
+});
+
+app.percentageBoxes.addEventListener("transitionend", () => {
+  actions.closePercentagesPage();
+  actions.calculateBudget();
+  actions.showCompletedPage();
+});
+
+app.proceedButton.addEventListener("click", () => {
+  actions.hideCompletedPage();
+});
+
+app.completedPage.addEventListener("transitionend", () => {
+  actions.closeCompletedPage();
+  actions.showBudgetPage();
 });
