@@ -61,6 +61,7 @@ const actions = {
   calculateBudget: function () {
     if (data.percentage === 10) {
       ////////// EXPENSES //////////
+      // const exp = app.expenses[0].firstElementChild.textContent;
       // Rent = 30% of income
       data.expenses.items.push({ rent: data.income * (30 / 100) });
 
@@ -82,7 +83,7 @@ const actions = {
       // Entertainment = 5% of income
       data.expenses.items.push({ entertainment: data.income * (5 / 100) });
 
-      // expenses.updateView();
+      data.expenses.updateView();
     }
   },
 
@@ -98,6 +99,13 @@ const data = {
     items: [],
     updateView: function () {
       // Update budget view
+      let index = 0;
+      app.expenses.forEach((exp) => {
+        let amount = Object.entries(data.expenses.items[index])[0][1];
+        index++;
+        console.log(amount);
+        exp.textContent = `R ${amount}`;
+      });
     },
   },
   income: {},
