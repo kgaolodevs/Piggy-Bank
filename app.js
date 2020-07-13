@@ -59,7 +59,27 @@ const actions = {
 
   calculateBudget: function () {
     if (data.percentage === 10) {
+      ////////// EXPENSES //////////
       // Rent = 30% of income
+      data.expenses.rent = `R ${data.income * (30 / 100)}`;
+
+      // Medical = 10% of income
+      data.expenses.medical = data.income * (10 / 100);
+
+      // Insurance = 5% of income
+      data.expenses.insurance = data.income * (5 / 100);
+
+      // Grocery = 20% of income
+      data.expenses.grocery = data.income * (20 / 100);
+
+      // Clothing = 10% of income
+      data.expenses.clothing = data.income * (10 / 100);
+
+      // Transport = 10% of income
+      data.expenses.transport = data.income * (10 / 100);
+
+      // Entertainment = 5% of income
+      data.expenses.entertainment = data.income * (5 / 100);
     }
   },
 
@@ -71,6 +91,8 @@ const actions = {
 const data = {
   income: null,
   percentage: null,
+  expenses: {},
+  income: {},
 };
 
 // Event listeners
