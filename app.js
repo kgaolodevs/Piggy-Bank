@@ -157,6 +157,37 @@ const actions = {
       // Investments = 10% of income
       data.incomes.items.push({ investments: data.income * (10 / 100) });
     } else if (data.percentage === 50) {
+      ////////// EXPENSES //////////
+      // Rent = 25% of income
+      data.expenses.items.push({ rent: data.income * (25 / 100) });
+
+      // Medical = 5% of income
+      data.expenses.items.push({ medical: data.income * (5 / 100) });
+
+      // Insurance = 5% of income
+      data.expenses.items.push({ insurance: data.income * (5 / 100) });
+
+      // Grocery = 7.5% of income
+      data.expenses.items.push({ grocery: data.income * (7.5 / 100) });
+
+      // Clothing = 2.5% of income
+      data.expenses.items.push({ clothing: data.income * (2.5 / 100) });
+
+      // Transport = 7.5% of income
+      data.expenses.items.push({ transport: data.income * (7.5 / 100) });
+
+      // Entertainment = 2.5% of income
+      data.expenses.items.push({ entertainment: data.income * (2.5 / 100) });
+
+      ////////// INCOME //////////
+      // Emergency savings = 20% of income
+      data.incomes.items.push({ savings: data.income * (20 / 100) });
+
+      // Retirement = 10% of income
+      data.incomes.items.push({ retirement: data.income * (10 / 100) });
+
+      // Investments = 20% of income
+      data.incomes.items.push({ investments: data.income * (20 / 100) });
     }
 
     data.updateView(app.expenses, data.expenses);
