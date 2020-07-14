@@ -247,13 +247,13 @@ app.percentageBoxes.addEventListener("click", (e) => {
     actions.storePercentage(e);
     actions.hidePercentagesPage();
     actions.calculateBudget();
+
+    actions.closePercentagesPage();
+    actions.showCompletedPage();
   }
 });
 
-app.percentageBoxes.addEventListener("transitionend", () => {
-  actions.closePercentagesPage();
-  actions.showCompletedPage();
-});
+// app.percentagesPage.addEventListener("transitionend", () => {});
 
 app.proceedButton.addEventListener("click", () => {
   actions.hideCompletedPage();

@@ -514,4 +514,29 @@
 .remove {
   display: none;
 }
+
+@media screen and (min-width: 800px) {
+  .app {
+    padding: 4rem 10rem 2rem 10rem;
+  }
+  .app__income .app__textSection--text {
+    font-size: 1.2rem;
+  }
+  .app__income .app__textSection--text2 {
+    font-size: 0.8rem;
+  }
+  .app__percentages--boxes .box {
+    padding: 4.5rem;
+    font-size: 1.5rem;
+  }
+  .app__percentages--boxes--content {
+    font-size: 1.35rem;
+  }
+  .app__budget {
+    font-size: 0.95rem;
+  }
+  .app__budget--burger {
+    display: none;
+  }
+}
 /*# sourceMappingURL=styles.css.map */

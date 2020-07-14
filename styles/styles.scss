@@ -413,3 +413,37 @@ $primary-black: #3e3b38;
 .remove {
   display: none;
 }
+
+// Responsiveness
+@media screen and (min-width: 800px) {
+  .app {
+    padding: 4rem 10rem 2rem 10rem;
+    &__income {
+      .app__textSection--text {
+        font-size: 1.2rem;
+      }
+      .app__textSection--text2 {
+        font-size: 0.8rem;
+      }
+    }
+
+    &__percentages {
+      &--boxes {
+        .box {
+          padding: 4.5rem;
+          font-size: 1.5rem;
+        }
+        &--content {
+          font-size: 1.35rem;
+        }
+      }
+    }
+
+    &__budget {
+      font-size: 0.95rem;
+      &--burger {
+        display: none;
+      }
+    }
+  }
+}
