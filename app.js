@@ -62,7 +62,6 @@ const actions = {
   calculateBudget: function () {
     if (data.percentage === 10) {
       ////////// EXPENSES //////////
-      // const exp = app.expenses[0].firstElementChild.textContent;
       // Rent = 30% of income
       data.expenses.items.push({ rent: data.income * (30 / 100) });
 
@@ -94,6 +93,37 @@ const actions = {
       // Investments = 3% of income
       data.incomes.items.push({ investments: data.income * (3 / 100) });
     } else if (data.percentage === 20) {
+      ////////// EXPENSES //////////
+      // Rent = 30% of income
+      data.expenses.items.push({ rent: data.income * (30 / 100) });
+
+      // Medical = 10% of income
+      data.expenses.items.push({ medical: data.income * (10 / 100) });
+
+      // Insurance = of income
+      data.expenses.items.push({ insurance: data.income * (10 / 100) });
+
+      // Grocery = 20% of income
+      data.expenses.items.push({ grocery: data.income * (20 / 100) });
+
+      // Clothing = of income
+      data.expenses.items.push({ clothing: data.income * (5 / 100) });
+
+      // Transport = of income
+      data.expenses.items.push({ transport: data.income * (10 / 100) });
+
+      // Entertainment = of income
+      data.expenses.items.push({ entertainment: data.income * (5 / 100) });
+
+      ////////// INCOME //////////
+      // Emergency savings = 4% of income
+      data.incomes.items.push({ savings: data.income * (4 / 100) });
+
+      // Retirement = 3% of income
+      data.incomes.items.push({ retirement: data.income * (3 / 100) });
+
+      // Investments = 3% of income
+      data.incomes.items.push({ investments: data.income * (3 / 100) });
     } else if (data.percentage === 35) {
     } else if (data.percentage === 50) {
     }
